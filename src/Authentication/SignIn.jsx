@@ -96,6 +96,7 @@ function SignIn(props) {
 								setErrorWrongPassword(true)
 								return;
 							} else {
+								console.log(response)
 								setErrorWrongPassword(false);
 								localStorage.setItem('id_user', response.userId);
 								setCheckPush(true);
