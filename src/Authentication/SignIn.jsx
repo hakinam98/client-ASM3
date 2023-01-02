@@ -99,6 +99,7 @@ function SignIn(props) {
 								console.log(response)
 								setErrorWrongPassword(false);
 								localStorage.setItem('id_user', response.userId);
+								localStorage.setItem('token', response.token);
 								setCheckPush(true);
 								const action = addSession(localStorage.getItem('id_user'));
 								dispatch(action);
