@@ -153,7 +153,9 @@ function ListCart(props) {
 											className='inc-btn p-0'
 											style={{ cursor: 'pointer' }}
 											onClick={() => {
-												handlerDown(
+
+
+												handlerUp(
 													value.idUser,
 													value.idProduct._id,
 													value.count
