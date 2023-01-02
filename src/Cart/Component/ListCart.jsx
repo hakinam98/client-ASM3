@@ -138,7 +138,9 @@ function ListCart(props) {
 													value.idProduct._id,
 													value.count
 												)
-												window.location.reload(false)
+												setTimeout(() => {
+													window.location.reload(false)
+												}, 2000)
 											}
 											}>
 											<i className='fas fa-caret-left'></i>
@@ -160,7 +162,9 @@ function ListCart(props) {
 													value.idProduct._id,
 													value.count
 												)
-												window.location.reload(false)
+												setTimeout(() => {
+													window.location.reload(false)
+												}, 2000)
 											}
 											}>
 											<i className='fas fa-caret-right'></i>
