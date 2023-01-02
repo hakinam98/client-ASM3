@@ -132,12 +132,14 @@ function ListCart(props) {
 										<button
 											className='dec-btn p-0'
 											style={{ cursor: 'pointer' }}
-											onClick={() =>
+											onClick={() => {
 												handlerDown(
 													value.idUser,
 													value.idProduct._id,
 													value.count
 												)
+												window.location.reload(false)
+											}
 											}>
 											<i className='fas fa-caret-left'></i>
 										</button>
@@ -150,12 +152,14 @@ function ListCart(props) {
 										<button
 											className='inc-btn p-0'
 											style={{ cursor: 'pointer' }}
-											onClick={() =>
-												handlerUp(
+											onClick={() => {
+												handlerDown(
 													value.idUser,
 													value.idProduct._id,
 													value.count
 												)
+												window.location.reload(false)
+											}
 											}>
 											<i className='fas fa-caret-right'></i>
 										</button>

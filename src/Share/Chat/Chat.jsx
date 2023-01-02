@@ -6,7 +6,7 @@ import ChatRoomsAPI from '../../API/ChatRoomsAPI';
 import { useSelector } from 'react-redux';
 
 import io from 'socket.io-client';
-const socket = io('http://localhost:5000', { transports: ['websocket'] });
+const socket = io('https://backend-asm3-kappa.vercel.app', { transports: ['websocket'] });
 
 function Chat(props) {
 	const [activeChat, setActiveChat] = useState(false);
@@ -89,7 +89,7 @@ function Chat(props) {
 
 	//Hàm này dùng để nhận socket từ server gửi lên
 	useEffect(() => {
-		//Nhận dữ liệu từ server gửi lên thông qua socket với key receive_message
+		// Nhận dữ liệu từ server gửi lên thông qua socket với key receive_message
 		socket.on('receive_message', (data) => {
 			//Sau đó nó sẽ setLoad gọi lại hàm useEffect lấy lại dữ liệu
 			setLoad(true);
